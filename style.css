@@ -1,10 +1,6 @@
 body {
   margin: 0;
   font-family: "Open Sans", serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
 }
 .menu-link {
   color: rgb(0, 0, 0);
@@ -24,16 +20,29 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+.container2 {
+  position: absolute;
+  top: 200px;
+  font-size: 24px;
+  display: flex;
+  margin: 25px;
+  gap: 50px;
+}
 .header-image {
   height: 100vh;
   width: 100%;
   object-fit: cover;
   filter: grayscale(0.7);
 }
+.image {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+}
 .headline {
   position: absolute;
   left: 50px;
-  top: 300px;
+  top: 150px;
   color: rgb(206, 115, 35);
   font-size: 70px;
   width: 500px;
@@ -44,9 +53,20 @@ body {
   height: 100px;
   padding: 30px 70px;
   left: 25px;
-  top: 700px;
-  color: white;
+  top: 450px;
+  color: rgb(225, 111, 18);
   background-color: rgba(212, 198, 198, 0.5);
+}
+.text2 {
+  position: relative;
+  height: 100px;
+  padding: 30px 50px;
+  left: 30;
+  top: 100;
+  bottom: 50px;
+  color: rgb(255, 98, 0);
+  background-color: aliceblue;
+  filter: grayscale(0.7);
 }
 .red {
   color: brown;
@@ -62,9 +82,13 @@ h2 {
   text-align: center;
   font-size: 30px;
 }
+h3 {
+  text-align: center;
+  font-size: 30px;
+}
 .video-section {
-  height: 300px;
-  padding: 30px 100px;
+  height: 450px;
+  padding: 50px 100px;
   display: flex;
   gap: 50px;
 }
@@ -81,8 +105,14 @@ h2 {
   width: calc(100vw * 0.4);
   height: calc(56.25vw * 0.4);
 }
+@media screen and (min-width:450px) {
+  body {line-height: 1.5;}
+}
+@media screen and (min-width:720px) {
+  body {color: firebrick;}
+}
 @media (max-width: 700px) {
-    .containerbeispiel {
+    .video-section {
         flex-direction: column;
         align-items: center;
         height: unset;
@@ -99,6 +129,6 @@ h2 {
     }
 
     .navigation {
-        display: none;
+        flex-direction: column;
     }
 }
